@@ -20,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 // Servir archivos estáticos desde "public"
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "docs")));
 
 // Configurar cliente de OpenAI
 const openai = new OpenAI({
@@ -87,7 +87,7 @@ Recuerda siempre sugerir al usuario que complete el formulario en la web para ha
 
 // Ruta de respaldo: sirve index.html si no se encuentra otra
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "public", "index.html"));
+  res.sendFile(path.resolve(__dirname, "docs", "index.html"));
 });
 
 // Iniciar servidor con manejo de errores por puerto ocupado

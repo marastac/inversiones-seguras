@@ -72,3 +72,43 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// Manejo del formulario de contacto con WhatsApp
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contact-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Obtener los valores del formulario
+      const nombre = document.querySelector('input[name="nombre"]').value;
+      const monto = document.querySelector('input[name="monto"]').value;
+      const consulta = document.querySelector('textarea[name="consulta"]').value;
+      
+      // Crear el mensaje para WhatsApp con toda la información
+      const mensaje = `*NUEVO CLIENTE - FINANCE PRO*
+      
+👤 *Nombre completo:* ${nombre}
+💰 *Monto a invertir:* S/ ${monto}
+📝 *Consulta:* ${consulta}
+      
+_Mensaje enviado desde el formulario web de Finance Pro_`;
+      
+      // Número de WhatsApp (sin el +)
+      const numeroWhatsApp = '51955899106';
+      
+      // Crear el enlace de WhatsApp
+      const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+      
+      // Abrir WhatsApp en una nueva ventana
+      window.open(enlaceWhatsApp, '_blank');
+      
+      // Opcional: Limpiar el formulario después de enviar
+      contactForm.reset();
+      
+      // Opcional: Mostrar mensaje de confirmación
+      alert('Serás redirigido a WhatsApp. Si no se abre automáticamente, por favor revisa tu bloqueador de ventanas emergentes.');
+    });
+  }
+});

@@ -54,10 +54,12 @@
   </header>
 
   <main>
-    <section class="banner">
-      <h2>La libertad financiera empieza aquí.</h2>
-      <p>Multiplica tu capital con nuestro sistema seguro, respaldado por aseguradoras de primer nivel.</p>
-    </section>
+    <section class="banner-custom">
+      <div class="hero-container">
+        <img src="images/invierte inteligente Empresarial.png" alt="Invierte Inteligente" class="hero-image">
+        <a href="#presentacion" class="hero-button">EMPIEZA AHORA</a>
+      </div>
+    </section>    
 
     <section id="presentacion">
       <h2>¿Qué es Finance Pro?</h2>
@@ -66,11 +68,17 @@
 
     <section id="video">
       <h2>Conoce el sistema en detalle</h2>
-      <video width="100%" height="auto" controls poster="images/preview.jpg">
-        <source src="media/explicacion.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-      </video>
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe 
+          src="https://www.youtube.com/embed/ba0X7ldV_RE"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
     </section>
+    
+    
 
     <section id="metodo">
       <h2>¡Así funciona!</h2>
@@ -109,40 +117,46 @@
       <h2>Conversaciones reales por WhatsApp</h2>
       <div class="photo-reviews carousel whatsapp-reviews">
         <div class="carousel-track">
-          <img src="images/chat1.jpg" alt="Chat 1">
-          <img src="images/chat2.jpg" alt="Chat 2">
-          <img src="images/chat3.jpg" alt="Chat 3">
-          <img src="images/chat4.jpg" alt="Chat 4">
-          <img src="images/chat5.jpg" alt="Chat 5">
-          <img src="images/chat6.jpg" alt="Chat 6">
+          <img src="images/Chat1.jpg" alt="Chat 1">
+          <img src="images/Chat2.jpg" alt="Chat 2">
+          <img src="images/Chat3.jpg" alt="Chat 3">
+          <img src="images/Chat4.jpg" alt="Chat 4">
+          <img src="images/Chat5.jpg" alt="Chat 5">
+          <img src="images/Chat6.jpg" alt="Chat 6">
         </div>
       </div>
     </section>
     
-    <section id="acceso">
-      <h2>¡Forma parte hoy!</h2>
-      <p>Rellena este formulario y te contactaremos directamente por WhatsApp.</p>
-      <form id="contact-form">
-        <label>Nombre completo:
-          <input type="text" name="nombre" required>
-        </label>
-        <label>¿Cuánto deseas invertir?
-          <input type="number" name="monto" required>
-        </label>
-        <label>Consulta:
-          <textarea name="consulta" required></textarea>
-        </label>
-        <button type="submit">Contactar por WhatsApp</button>
-      </form>
-    </section>
-    <section id="ia-assistant">
-      <h2>¿Tienes dudas? Nuestro asistente IA puede ayudarte</h2>
-      <div id="chat-output" class="chat-box"></div>
-      <div class="chat-controls">
-        <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
-        <button id="send-btn">Enviar</button>
-      </div>
-    </section>
+    <!-- Sección de registro mejorada - preservando toda la funcionalidad -->
+<section id="acceso">
+  <h2>¡Forma parte hoy!</h2>
+  <p>Rellena este formulario y te contactaremos directamente por WhatsApp.</p>
+  <form id="contact-form">
+    <label>
+      <span>Nombre completo:</span>
+      <input type="text" name="nombre" required placeholder="Ingresa tu nombre">
+    </label>
+    <label>
+      <span>¿Cuánto deseas invertir?</span>
+      <input type="number" name="monto" required placeholder="Ej: 500, 1000, 2000 soles">
+    </label>
+    <label>
+      <span>Consulta:</span>
+      <textarea name="consulta" required placeholder="¿Alguna duda específica que tengas?"></textarea>
+    </label>
+    <button type="submit">Contactar por WhatsApp</button>
+  </form>
+</section>
+
+<!-- Sección de asistente IA mejorada - preservando toda la funcionalidad -->
+<section id="ia-assistant">
+  <h2>¿Tienes dudas? Nuestro asistente IA puede ayudarte</h2>
+  <div id="chat-output" class="chat-box"></div>
+  <div class="chat-controls">
+    <input type="text" id="user-input" placeholder="Escribe tu pregunta..." />
+    <button id="send-btn">Enviar</button>
+  </div>
+</section>
   </main>
 
   <footer>
